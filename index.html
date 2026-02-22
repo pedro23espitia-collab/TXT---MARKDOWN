@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TXT a Markdown (sin cambios)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <h1>Convertidor TXT → Markdown (0 cambios)</h1>
+      <p class="descripcion">
+        Esta herramienta copia el contenido exactamente igual y lo guarda como <code>.md</code>.
+      </p>
+
+      <section class="panel">
+        <h2>Subir archivo .txt</h2>
+        <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Zona para arrastrar o seleccionar archivo txt">
+          <p>Arrastra y suelta tu archivo <strong>.txt</strong> aquí</p>
+          <p>o</p>
+          <label class="btn-secundario" for="inputArchivo">Seleccionar archivo .txt</label>
+          <input id="inputArchivo" type="file" accept=".txt,text/plain" />
+        </div>
+        <p id="nombreArchivo" class="archivo">Ningún archivo cargado.</p>
+      </section>
+
+      <section class="panel">
+        <h2>O pega el texto aquí</h2>
+        <textarea id="entradaTexto" placeholder="Pega aquí el texto exacto..." spellcheck="false"></textarea>
+      </section>
+
+      <section class="panel">
+        <h2>Markdown generado</h2>
+        <textarea id="salidaMarkdown" readonly spellcheck="false"></textarea>
+      </section>
+
+      <section class="panel acciones">
+        <button id="btnCopiar" type="button">Copiar Markdown</button>
+        <button id="btnDescargar" type="button">Descargar .md</button>
+        <button id="btnLimpiar" type="button">Limpiar</button>
+      </section>
+
+      <section class="panel verificacion">
+        <h2>Verificación de integridad</h2>
+        <ul>
+          <li>Caracteres (entrada vs salida): <strong id="metricCaracteres">0 vs 0</strong></li>
+          <li>Líneas (entrada vs salida): <strong id="metricLineas">1 vs 1</strong></li>
+          <li>Estado: <strong id="estado">✅ IDÉNTICO</strong></li>
+          <li id="detalleDiferencias">Sin diferencias detectadas.</li>
+        </ul>
+      </section>
+
+      <p id="mensaje" class="mensaje" aria-live="polite"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
