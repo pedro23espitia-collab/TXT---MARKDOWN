@@ -1,0 +1,124 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6fb;
+  color: #1a1f2f;
+}
+
+.contenedor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.descripcion {
+  margin-bottom: 20px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #d9deea;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.dropzone {
+  border: 2px dashed #6878a8;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropzone.dragover {
+  border-color: #284aa8;
+  background: #eef3ff;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.btn-secundario,
+button {
+  display: inline-block;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: #325dd8;
+  color: #fff;
+}
+
+.btn-secundario {
+  margin-top: 8px;
+}
+
+button {
+  margin-right: 8px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 180px;
+  resize: vertical;
+  border-radius: 8px;
+  border: 1px solid #c6cede;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  white-space: pre;
+}
+
+.archivo,
+.mensaje {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.verificacion ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0f1220;
+    color: #edf0f7;
+  }
+
+  .panel {
+    background: #1a2138;
+    border-color: #37405e;
+  }
+
+  .dropzone {
+    border-color: #6f8ae8;
+  }
+
+  textarea {
+    background: #11182b;
+    color: #eef2ff;
+    border-color: #465377;
+  }
+}
